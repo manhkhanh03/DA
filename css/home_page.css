@@ -1,0 +1,26 @@
+.website {
+    width: 100%;
+    height: 100%;
+}
+
+.menu {
+    width: 100%;
+    height: 100px;
+    display: flex;
+}
+
+.menu .menu-logo {
+    width: 180px;
+    height: 94px;
+    padding-left: 100px;
+}
+
+.menu .menu-logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.navbar {
+    width: 500px;
+    height: 100px;
+}
