@@ -1,0 +1,14 @@
+:root {
+    --background-color: #fff;
+    --color-item: #EBEBEB;
+    --color: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    font-size: 18px;
+    color: var(--color);
+    box-sizing: border-box;
+}
