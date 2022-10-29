@@ -8,86 +8,232 @@
     <title>Trang chu MHL</title>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="/css/home_page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <div class="website">
         <div class="menu">
-            <div class="menu-logo">
-                <img src="/img/MHL.png" alt="MHL">
+            <div class="navbar">
+                <a class="nav-img" href=""><img src="/img/MHL.png" alt="MHL"></a>
+                <ul class="navbar-btn">
+                    <li class="list-item"><a href="">Trang Chủ</a></li>
+                    <li class="list-item nav-item" style="cursor: pointer;">
+                        Giày Snacker
+                        <div class="list-brand">
+                            <ul class="list-list">
+                                <li class="brand"><a href="#">Nike</a></li>
+                                <li class="brand"><a href="#">MLB</a></li>
+                                <li class="brand"><a href="#">Converse</a></li>
+                                <li class="brand"><a href="#">Vans</a></li>
+                                <li class="brand"><a href="#">Fila</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="list-item"><a href="">Sale</a></li>
+                    <li class="list-item"><a href="">Tin Tức</a></li>
+                    <li class="list-item"><a href="">FAQ</a></li>
+                </ul>
             </div>
 
-            <ul class="navbar">
-                <li class="list-item item active"><a href="">Trang Chủ</a></li>
-                <li class="list-item item active nav-item" style="cursor: pointer;">
-                    Giày Snacker
-                    <div class="list-brand">
-                        <ul class="list-list">
-                            <li class="brand"><a href="">Nike</a></li>
-                            <li class="brand"><a href="">MLB</a></li>
-                            <li class="brand"><a href="">Converse</a></li>
-                            <li class="brand"><a href="">Vans</a></li>
-                            <li class="brand"><a href="">Fila</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="list-item item active"><a href="">Sale</a></li>
-                <li class="list-item item active"><a href="">Tin Tức</a></li>
-                <li class="list-item item active"><a href="">FAQ</a></li>
-                <li class="list-item active-input">
+
+            <ul class="s-s-u">
+                <li class="item active-input">
+                    <input type="text" id="input" class="search" placeholder="Tìm kiếm sản phẩm">
                     <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                    <input type="text" class="search" placeholder="Tìm kiếm sản phẩm">
                     <i class="fa-regular fa-image search-active"></i>
                 </li>
-                <li class="list-item"><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
-                <li class="list-item"><a href=""><i class="fa-solid fa-user"></i></a></li>
+                <li class="item"><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li class="item"><a href=""><i class="fa-solid fa-user"></i></a></li>
             </ul>
         </div>
-        <!-- slide
-        slide
-        <div class="container" style="position: absolute;">
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                Wrapper for slides
-                <div class="carousel-inner">
-                    <div class="item active">
-                        <img src="/img/nike.jpg" alt="" style="width:100%; height: 720px;">
+
+        <div class="body">
+            <!-- slide -->
+            <div class="container">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3"></button>
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4"></button>
+                    </div>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <a href=""><img src="/img/nike.jpg" alt="" style="width:100%; height: 720px;"></a>
+                        </div>
+
+                        <div class="item">
+                            <a href=""><img src="/img/vans2.jpg" alt="" style="width:100%; height: 720px;"></a>
+                        </div>
+
+                        <div class="item">
+                            <a href=""><img src="/img/converse.jpg" alt="" style="width:100%; height: 720px;"></a>
+                        </div>
+                        <div class="item">
+                            <a href=""><img src="/img/fila.jpg" alt="" style="width:100%; height: 720px;"></a>
+                        </div>
+                        <div class="item">
+                            <a href=""><img src="/img/mlb.png" alt="" style="width:100%; height: 720px;"></a>
+                        </div>
                     </div>
 
-                    <div class="item">
-                        <img src="/img/vans2.jpg" alt="" style="width:100%; height: 720px;">
-                    </div>
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" data-slide="prev"
+                        style="display: flex; align-items: center; padding-left: 40px;">
+                        <i class="fa-solid fa-chevron-left" style="color: white;"></i>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next"
+                        style="display: flex; align-items: center; padding-left: 172px;">
+                        <i class="fa-solid fa-chevron-right" style="color: white;"></i>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
 
-                    <div class="item">
-                        <img src="/img/converse.jpg" alt="" style="width:100%; height: 720px;">
+            <!-- best - selling product -->
+            <div class="best-selling">
+                <h3 class="headding">SẢN PHẨM BÁN CHẠY</h3>
+                <div class="best-selling-body autoplay" style="padding-left: 30px">
+                    <div class="box-product" style="max-width: 237.2px;">
+                        <img src="/img/nikeAirForceAf1.jpg" alt="" class="box-img">
+                        <div class="box-title">
+                            <h3 class="box-header">
+                                Giày Nike Air Force Af1
+                            </h3>
+                            <div class="box-price">
+                                <span class="price">Giá: 500.000đ</span>
+                                <span class="sales">Lượt bán: 1.5k</span>
+                                <div class="shoe-color">
+                                    <i class="fa-solid fa-circle"></i>
+                                    <i class="fa-solid fa-circle" style="color: red"></i>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="item">
-                        <img src="/img/fila.jpg" alt="" style="width:100%; height: 720px;">
+                    <div class="box-product" style="max-width: 237.2px;">
+                        <img src="/img/nikeAirForceAf1.jpg" alt="" class="box-img">
+                        <div class="box-title">
+                            <h3 class="box-header">
+                                Giày Nike Air Force Af1
+                            </h3>
+                            <div class="box-price">
+                                <span class="price">Giá: 500.000đ</span>
+                                <span class="sales">Lượt bán: 1.5k</span>
+                                <div class="shoe-color">
+                                    <i class="fa-solid fa-circle"></i>
+                                    <i class="fa-solid fa-circle" style="color: red"></i>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="item">
-                        <img src="/img/mlb.png" alt="" style="width:100%; height: 720px;">
+                    <div class="box-product" style="max-width: 237.2px;">
+                        <img src="/img/nikeAirForceAf1.jpg" alt="" class="box-img">
+                        <div class="box-title">
+                            <h3 class="box-header">
+                                Giày Nike Air Force Af1
+                            </h3>
+                            <div class="box-price">
+                                <span class="price">Giá: 500.000đ</span>
+                                <span class="sales">Lượt bán: 1.5k</span>
+                                <div class="shoe-color">
+                                    <i class="fa-solid fa-circle"></i>
+                                    <i class="fa-solid fa-circle" style="color: red"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-product" style="max-width: 237.2px;">
+                        <img src="/img/nikeAirForceAf1.jpg" alt="" class="box-img">
+                        <div class="box-title">
+                            <h3 class="box-header">
+                                Giày Nike Air Force Af1
+                            </h3>
+                            <div class="box-price">
+                                <span class="price">Giá: 500.000đ</span>
+                                <span class="sales">Lượt bán: 1.5k</span>
+                                <div class="shoe-color">
+                                    <i class="fa-solid fa-circle"></i>
+                                    <i class="fa-solid fa-circle" style="color: red"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-product" style="max-width: 237.2px;">
+                        <img src="/img/nikeAirForceAf1.jpg" alt="" class="box-img">
+                        <div class="box-title">
+                            <h3 class="box-header">
+                                Giày Nike Air Force Af1
+                            </h3>
+                            <div class="box-price">
+                                <span class="price">Giá: 500.000đ</span>
+                                <span class="sales">Lượt bán: 1.5k</span>
+                                <div class="shoe-color">
+                                    <i class="fa-solid fa-circle"></i>
+                                    <i class="fa-solid fa-circle" style="color: red"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-product" style="max-width: 237.2px;">
+                        <img src="/img/nikeAirForceAf1.jpg" alt="" class="box-img">
+                        <div class="box-title">
+                            <h3 class="box-header">
+                                Giày Nike Air Force Af1
+                            </h3>
+                            <div class="box-price">
+                                <span class="price">Giá: 500.000đ</span>
+                                <span class="sales">Lượt bán: 1.5k</span>
+                                <div class="shoe-color">
+                                    <i class="fa-solid fa-circle"></i>
+                                    <i class="fa-solid fa-circle" style="color: red"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-product" style="max-width: 237.2px;">
+                        <img src="/img/nikeAirForceAf1.jpg" alt="" class="box-img">
+                        <div class="box-title">
+                            <h3 class="box-header">
+                                Giày Nike Air Force Af1
+                            </h3>
+                            <div class="box-price">
+                                <span class="price">Giá: 500.000đ</span>
+                                <span class="sales">Lượt bán: 1.5k</span>
+                                <div class="shoe-color">
+                                    <i class="fa-solid fa-circle"></i>
+                                    <i class="fa-solid fa-circle" style="color: red"></i>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                Left and right controls
-                <a class="left carousel-control" href="#myCarousel" data-slide="prev"
-                    style="display: flex; align-items: center; padding-left: 100px;">
-                    <i class="fa-solid fa-chevron-left" style="color: white;"></i>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#myCarousel" data-slide="next"
-                    style="display: flex; align-items: center; padding-left: 108px;">
-                    <i class="fa-solid fa-chevron-right" style="color: white;"></i>
-                    <span class="sr-only">Next</span>
-                </a>
             </div>
         </div>
-    -->
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"
+        integrity="sha512-eP8DK17a+MOcKHXC5Yrqzd8WI5WKh6F1TIk5QZ/8Lbv+8ssblcz7oGC8ZmQ/ZSAPa7ZmsCU4e/hcovqR8jfJqA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/home_page.js"></script>
+    <link rel="stylesheet" href="/css/slick.css">
 </body>
 
 </html>

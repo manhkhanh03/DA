@@ -1,0 +1,21 @@
+.slick-next,
+.slick-prev {
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    padding-top: 3px;
+    background-color: #dcdcdc;
+}
+
+/* 
+.slick-next:hover {
+    width: 50px;
+    position: relative;
+    right: 0;
+    height: 50px;
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    box-shadow: 4px 4px 8px #d9d9d9,
+        -4px -4px 8px #ffffff,
+        -4px 4px 8px #c9c9c9,
+        4px -4px 8px #ffffff;
+} */

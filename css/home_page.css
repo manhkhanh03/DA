@@ -5,27 +5,38 @@
 
 .menu {
     width: 100%;
-    height: 120px;
+    height: 90px;
+    margin: 30px 0 20px;
     display: flex;
+    font-size: 18px;
     justify-content: space-between;
+    color: #7e7e7e;
 }
 
-.menu .menu-logo {
-    width: 254px;
-    height: 100px;
+.menu .navbar {
+    width: 100%;
+    max-width: 740px;
+    height: 86px;
     padding-left: 64px;
+    display: flex;
 }
 
-.menu .menu-logo img {
+.menu .navbar .nav-img {
+    width: 24%;
+    height: 100%;
+    margin-right: 30px;
+}
+
+
+.menu .navbar a img {
     width: 100%;
     height: 100%;
 }
 
-.navbar {
-    width: 760px;
-    height: 56px;
+.navbar-btn {
+    width: 100%;
+    height: 100%;
     display: flex;
-    padding-top: 14px;
     margin-top: 22px;
     font-weight: 600;
     justify-content: space-between;
@@ -35,6 +46,7 @@
 .navbar .list-item {
     list-style: none;
     padding-top: 8px;
+    z-index: -1;
 }
 
 .navbar .item:hover {
@@ -45,63 +57,6 @@
     width: 100%;
     text-decoration: none;
     color: var(--color);
-}
-
-
-.active {
-    /* display: none; */
-}
-
-.active-input {
-    cursor: pointer;
-    position: relative;
-}
-
-.search-icon {
-    position: absolute;
-    top: calc(50% - 6px);
-    left: 6px;
-    z-index: -1;
-}
-
-.active-input .search {
-    /* display: none; */
-    margin-right: 8px;
-    font-weight: 300;
-    padding-left: 36px;
-    font-size: 14px;
-    color: rgb(81, 81, 81);
-    border: none;
-    width: 30px;
-    height: 30px;
-    border-radius: 10px;
-    z-index: 999;
-    background-color: rgba(255, 0, 0, 0);
-}
-
-.search-active {
-    display: none;
-}
-
-
-.search:focus {
-    width: 300px;
-    outline: 1px solid #d7d7d7;
-    border: none;
-}
-
-.search:focus~.active {
-    display: none;
-}
-
-.search:focus~.search-active {
-    position: absolute;
-    top: 15px;
-    right: calc(100% - 94%);
-}
-
-.search:focus~.search-active {
-    display: block;
 }
 
 .list-brand {
@@ -141,8 +96,143 @@
     background-color: #e5e5e5;
 }
 
+/* s-s-u */
+.s-s-u {
+    width: 40%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    position: relative;
+    margin-right: 40px;
+}
+
+.s-s-u .item {
+    margin: 0 18px;
+}
+
+.active-input {
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    right: 0;
+}
+
+.search-icon {
+    z-index: -1;
+    position: absolute;
+    top: -7px;
+    right: 16%;
+}
+
+.active-input .search {
+    /* display: none; */
+    margin-right: 8px;
+    font-weight: 300;
+    padding-left: 30px;
+    font-size: 14px;
+    color: rgb(81, 81, 81);
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    z-index: 999;
+    background-color: rgba(255, 0, 0, 0);
+    position: absolute;
+    top: -14px;
+    left: -26px;
+}
+
+.search-active {
+    display: none;
+}
+
+.search:focus {
+    width: 300px;
+    outline: 1px solid #d7d7d7;
+    border: none;
+    position: relative;
+    top: 0;
+    left: 20px;
+}
+
+.search:focus~.search-icon {
+    top: 8px;
+    right: 0;
+}
+
+.search:focus~.search-active {
+    position: absolute;
+    top: 8px;
+    right: calc(100% - 90%);
+    display: block;
+    z-index: 999;
+}
+
 .container {
     width: 100%;
     height: 590px;
     padding: 0;
 }
+
+.carousel-indicators .active {
+    position: relative;
+    top: 5px;
+    border: 1px solid #7e7e7e;
+    border-radius: 50%;
+}
+
+.best-selling {
+    width: 100%;
+    height: 520px;
+    margin-top: 180px;
+}
+
+.best-selling .headding {
+    padding: 20px 20px 30px;
+    font-weight: 600;
+}
+
+.best-selling-body {
+    margin: 0 calc((100% - 90%) / 2);
+    width: 90%;
+    height: 412px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-product {
+    width: 228px;
+    height: 336px;
+    background-color: #EBEBEB;
+    font-size: 14.4px;
+}
+
+.box-img {
+    width: 100%;
+    height: 228px;
+}
+
+.box-title {
+    padding: 0 10px;
+}
+
+.box-header {
+    font-size: 14.4px;
+}
+
+.box-price {
+    font-size: 12px;
+}
+
+.sales {
+    float: right;
+}
+
+.fa-circle {
+    margin: 8px 4px 0 0;
+    cursor: pointer;
+}
+
+.slick-arrow {}
