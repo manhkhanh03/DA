@@ -1,11 +1,26 @@
 .slick-next,
 .slick-prev {
-    border-radius: 50%;
-    width: 26px;
-    height: 26px;
-    padding-top: 3px;
-    background-color: #dcdcdc;
+    position: absolute;
+    top: 42%;
 }
+
+.slick-next::before,
+.slick-prev::before {
+    font-size: 36px;
+    /* position: absolute; */
+    /* top: -48px; */
+    color: var(--background-color-main);
+    /* background-color: var(--background-color-main); */
+}
+
+.slick-prev {
+    left: -46px;
+}
+
+.slick-next {
+    right: -28px;
+}
+
 
 /* 
 .slick-next:hover {

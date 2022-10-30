@@ -2,6 +2,7 @@
     --background-color: #fff;
     --color-item: #EBEBEB;
     --color: #2f2f2f;
+    --background-color-main: #f3f3f3;
 }
 
 * {
@@ -10,4 +11,9 @@
     font-family: inherit;
     color: var(--color);
     box-sizing: border-box;
+}
+
+.heading {
+    padding: 20px 20px 30px;
+    font-weight: 600;
 }

@@ -46,10 +46,11 @@
 .navbar .list-item {
     list-style: none;
     padding-top: 8px;
+    height: 36px;
     z-index: -1;
 }
 
-.navbar .item:hover {
+.navbar .navbar-btn .list-item:hover {
     border-bottom: 1px solid var(--color);
 }
 
@@ -185,26 +186,22 @@
 
 .best-selling {
     width: 100%;
-    height: 520px;
+    height: 440px;
     margin-top: 180px;
-}
-
-.best-selling .headding {
-    padding: 20px 20px 30px;
-    font-weight: 600;
+    /* background-color: var(--background-color-main); */
 }
 
 .best-selling-body {
     margin: 0 calc((100% - 90%) / 2);
     width: 90%;
-    height: 412px;
-    display: flex;
-    justify-content: space-between;
+    height: 374px;
 }
 
 .box-product {
     width: 228px;
     height: 336px;
+    max-width: 237.2px;
+    margin: 0 0 24px 18px;
     background-color: #EBEBEB;
     font-size: 14.4px;
 }
@@ -220,6 +217,9 @@
 
 .box-header {
     font-size: 14.4px;
+    height: 36px;
+    max-height: 36px;
+    margin-bottom: 10px;
 }
 
 .box-price {
@@ -235,4 +235,64 @@
     cursor: pointer;
 }
 
-.slick-arrow {}
+.famous-brand {}
+
+.brand-brand {
+    display: flex;
+    justify-content: space-around;
+}
+
+.box-brand {
+    text-decoration: none;
+}
+
+.box-brand img {
+    width: 200px;
+    height: 127.66px;
+}
+
+.box-brand p {
+    font-size: 30px;
+    text-align: center;
+    padding-top: 28px;
+}
+
+.product-product {
+    margin: 0 calc((100% - 90%) / 2);
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    max-height: 710px;
+    overflow: hidden;
+}
+
+.see-more {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.see-more button {
+    background: none;
+    height: 40px;
+    width: 150px;
+    color: #0D6EFD;
+    border: 1px solid #0D6EFD;
+    border-radius: 8px;
+    font-size: 22px;
+}
+
+.button-custom {
+    text-align: center;
+}
+
+.button-custom button {
+    background: none;
+    height: 40px;
+    width: 150px;
+    color: #0D6EFD;
+    border: 1px solid #0D6EFD;
+    border-radius: 8px;
+    font-size: 22px;
+}
