@@ -13,6 +13,14 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
 .heading {
     padding: 20px 20px 30px;
     font-weight: 600;
