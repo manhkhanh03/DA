@@ -3,12 +3,13 @@
     --color-item: #EBEBEB;
     --color: #2f2f2f;
     --background-color-main: #f3f3f3;
+    --background-color-menu: #fff;
 }
 
 * {
     margin: 0;
     padding: 0;
-    font-family: inherit;
+    /* font-family: proxima nova, proxima-nova, Helvetica, Arial, sans-serif; */
     color: var(--color);
     box-sizing: border-box;
 }
@@ -22,6 +23,7 @@ ul {
 }
 
 .heading {
-    padding: 20px 20px 30px;
+    padding: 20px 46px 30px;
     font-weight: 600;
+    font-size: 24px;
 }
