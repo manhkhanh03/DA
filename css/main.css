@@ -2,6 +2,7 @@
     --background-color: #fff;
     --color-item: #EBEBEB;
     --color: #2f2f2f;
+    --color-footer: #fff;
     --background-color-main: #f3f3f3;
     --background-color-menu: #fff;
 }
@@ -9,9 +10,11 @@
 * {
     margin: 0;
     padding: 0;
-    /* font-family: proxima nova, proxima-nova, Helvetica, Arial, sans-serif; */
-    color: var(--color);
+    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Montserrat', sans-serif; */
+    /* color: var(--color); */
     box-sizing: border-box;
+    /* font-weight: 600; */
 }
 
 a {
@@ -22,8 +25,24 @@ ul {
     list-style: none;
 }
 
+button {
+    cursor: pointer;
+}
+
 .heading {
     padding: 20px 46px 30px;
     font-weight: 600;
     font-size: 24px;
+}
+
+@keyframes growth {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
