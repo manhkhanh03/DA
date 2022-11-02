@@ -10,11 +10,12 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
-    /* font-family: 'Montserrat', sans-serif; */
-    /* color: var(--color); */
     box-sizing: border-box;
-    /* font-weight: 600; */
+}
+
+@font-face {
+    src: url(../Montserrat-Medium.otf);
+    font-family: Montserrat;
 }
 
 a {
