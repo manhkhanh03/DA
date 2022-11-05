@@ -1,0 +1,66 @@
+.style-style {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-style {
+    width: 27.3%;
+    max-width: 374px;
+    height: 326px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.style-heading {
+    padding: 10px 0 20px 20px;
+    line-height: 16px;
+    font-size: 18px;
+}
+
+
+.box-style .box-img {
+    width: 100%;
+    height: 282px;
+    max-height: 282px;
+    overflow: hidden;
+}
+
+.box-style img {
+    width: 100%;
+    height: 282px;
+    max-height: 282px;
+    /* position: relative;
+    -webkit-transition: all .4s linear;
+    transition: all .4s linear; */
+    position: relative;
+    -webkit-transition: all 0.4s cubic-bezier(0.88, -0.99, 0, 1.81);
+    transition: all 0.4s cubic-bezier(0.88, -0.99, 0, 1.81);
+}
+
+.box-style:hover img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    overflow: hidden;
+}
+
+.listPage {
+    height: 50px;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.listPage li {
+    width: 46px;
+    height: 36px;
+    margin: 0 10px;
+    padding-top: 8px;
+    cursor: pointer;
+    display: inline-block;
+    background-color: #c6c6c65e;
+}
+
+.listPage .active {
+    color: #ffffff;
+    background-color: red;
+}
