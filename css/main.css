@@ -36,6 +36,11 @@ button {
     font-size: 24px;
 }
 
+.icon {
+    width: 20px;
+    font-size: 20px;
+}
+
 @keyframes growth {
     from {
         opacity: 0;
@@ -263,7 +268,7 @@ button {
 
 .search:focus~.search-active {
     position: absolute;
-    top: 4px;
+    top: 0;
     right: calc(100% + 60%);
     display: block;
     z-index: 999;
