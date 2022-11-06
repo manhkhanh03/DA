@@ -41,84 +41,68 @@ function unHidden() {
     })
 }
 
-// xem them
-// function seeMore() {
-//     let height = document.getElementById('product-product').style.maxHeight + '360px';
-//     document.getElementById('product-product').style.maxHeight = height;
-//     document.getElementById('see-more').style.margin = '32px 0 20px';
-// }
+// Phan trang
+let thisPage = 1;
+let limit = 10;
+let list = document.querySelectorAll('.product-product .box-product');
 
-// seeMore()
+function loadItem() {
+    let beginGet = limit * (thisPage - 1);
+    let endGet = limit * thisPage - 1;
+    list.forEach((item, key) => {
+        if (key >= beginGet && key <= endGet)
+            item.style.display = 'block';
+        else
+            item.style.display = 'none';
+    })
+    listPage();
+}
+loadItem();
 
-function seeMore() {
-    // let height = document.getElementById('product-product').maxHeight + '360px';
-    // height = document.getElementById('product-product').maxHeight + '360px';
-    if (document.getElementById('see').value == '0') {
-        document.getElementById('product-product').style.maxHeight = '1060px';
-        document.getElementById('see-more').style.margin = '32px 0 20px';
-        document.getElementById('see').innerHTML = 'Ẩn Bớt';
-        document.getElementById('see').value = '1';
+function listPage() {
+    let count = Math.ceil(list.length / limit);
+    document.querySelector('.listPage').innerHTML = '';
 
+    // prev
+    if (thisPage != 1) {
+        let prev = document.createElement('li');
+        prev.classList.add('fa-solid', 'fa-chevron-left');
+        prev.setAttribute('onclick', 'changePage(' + (thisPage - 1) + ')');
+        document.querySelector('.listPage').appendChild(prev);
     }
-    else {
-        height = document.getElementById('product-product').style.maxHeight = '720px';
-        document.getElementById('see-more').style.margin = '20px 0';
-        document.getElementById('see').innerHTML = 'Xem Thêm';
-        document.getElementById('see').value = '0';
+
+    for (i = 1; i <= count; i++) {
+        let newPage = document.createElement('li');
+        newPage.innerText = i;
+        if (i == thisPage)
+            newPage.classList.add('active');
+        newPage.setAttribute('onclick', 'changePage(' + i + ')');
+        document.querySelector('.listPage').appendChild(newPage);
+    }
+
+    // next
+    if (thisPage < count) {
+        let next = document.createElement('li');
+        next.classList.add('fa-solid', 'fa-chevron-right');
+        next.setAttribute('onclick', 'changePage(' + (thisPage + 1) + ')');
+        document.querySelector('.listPage').appendChild(next);
     }
 }
 
-// Phan trang
-// let thisPage = 1;
-// let limit = 10;
-// let list = document.querySelectorAll('.product-product .box-product');
+function changePage(i) {
+    thisPage = i;
+    loadItem();
+}
 
-// function loadItem() {
-//     let beginGet = limit * (thisPage - 1);
-//     let endGet = limit * thisPage - 1;
-//     list.forEach((item, key) => {
-//         if (key >= beginGet && key <= endGet)
-//             item.style.display = 'block';
-//         else
-//             item.style.display = 'none';
-//     })
-//     listPage();
-// }
-// loadItem();
-
-// function listPage() {
-//     let count = Math.ceil(list.length / limit);
-//     document.querySelector('.listPage').innerHTML = '';
-
-//     // prev
-//     if (thisPage != 1) {
-//         let prev = document.createElement('li');
-//         prev.classList.add('fa-solid', 'fa-chevron-left');
-//         prev.setAttribute('onclick', 'changePage(' + (thisPage - 1) + ')');
-//         document.querySelector('.listPage').appendChild(prev);
-//     }
-
-//     for (i = 1; i <= count; i++) {
-//         let newPage = document.createElement('li');
-//         newPage.innerText = i;
-//         if (i == thisPage)
-//             newPage.classList.add('active');
-//         newPage.setAttribute('onclick', 'changePage(' + i + ')');
-//         document.querySelector('.listPage').appendChild(newPage);
-//     }
-
-//     // next
-//     if (thisPage < count) {
-//         let next = document.createElement('li');
-//         next.classList.add('fa-solid', 'fa-chevron-right');
-//         next.setAttribute('onclick', 'changePage(' + (thisPage + 1) + ')');
-//         document.querySelector('.listPage').appendChild(next);
-//     }
-// }
-
-// function changePage(i) {
-//     thisPage = i;
-//     loadItem();
-// }
-
-
+// textBehind
+function textBehind() {
+    Value = document.getElementById('textBehind').value;
+    if(Value == 0) {
+        document.getElementById('textBehind').style.webkitLineClamp = 'unset';
+        document.getElementById('textBehind').value = '1';
+    }
+    else {
+        document.getElementById('textBehind').style.webkitLineClamp = '3';
+        document.getElementById('textBehind').value = '0';
+    }
+}

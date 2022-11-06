@@ -44,23 +44,26 @@
     overflow: hidden;
 }
 
-.listPage {
-    height: 50px;
-    text-align: center;
-    margin: 40px 0;
+.introduce {
+    margin: 0 auto;
 }
 
-.listPage li {
-    width: 46px;
-    height: 36px;
-    margin: 0 10px;
-    padding-top: 8px;
-    cursor: pointer;
-    display: inline-block;
-    background-color: #c6c6c65e;
+.introduce-text {
+    font-weight: lighter;
+    font-size: 14px;
+    padding: 0 0 36px;
 }
 
-.listPage .active {
-    color: #ffffff;
-    background-color: red;
+.introduce img {
+    width: 80%;
+    margin: 0 10%;
+}
+
+#textBehind {
+    padding: 36px 0 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
 }
