@@ -32,9 +32,7 @@ $(document).ready(function () {
 // hover navbar
 function unHidden() {
     document.getElementById('list-item').addEventListener('mouseover', function () {
-        setTimeout(() => {
-            document.getElementById('list-item').style.overflow = 'unset';
-        }, 0);
+        document.getElementById('list-item').style.overflow = 'unset';
     })
     document.getElementById('list-item').addEventListener('mouseleave', function () {
         document.getElementById('list-item').style.overflow = 'hidden';
@@ -97,7 +95,7 @@ function changePage(i) {
 // textBehind
 function textBehind() {
     Value = document.getElementById('textBehind').value;
-    if(Value == 0) {
+    if (Value == 0) {
         document.getElementById('textBehind').style.webkitLineClamp = 'unset';
         document.getElementById('textBehind').value = '1';
     }

@@ -469,7 +469,7 @@ button {
 .footer {
     height: 483px;
     position: relative;
-    background-image: url(/img/footer2.jpg);
+    background-image: url(/img/img/footer2.jpg);
     background-size: 77%;
     color: var(--color-footer);
 }
