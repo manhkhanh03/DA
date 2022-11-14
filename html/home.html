@@ -14,26 +14,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
         integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/css/home.css">
-    <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/telephone-ipad.css">
 </head>
 
 <body>
 
     <div class="website">
         <header class="menu">
+            <div id="toggle" value="0" onclick="display()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
             <div class="navbar">
                 <a class="nav-img" href=""><img src="/img/logo-brand/MHL.png" alt="MHL"></a>
-                <ul class="navbar-btn">
+                <ul class="navbar-btn" id="navbar-btn">
                     <li class="list-item"><a class="list-item-a" href="/html/home.html">Trang Chủ</a></li>
                     <li id="list-item" onmouseover="unHidden()" class="list-item nav-item"
                         style="cursor: pointer; color: var(--color);">
                         <div class="list-item-a">
-                            Giày Snacker
+                            Giày Sneacker
                             <div class="list-brand">
                                 <div class="list-list">
                                     <a href="/html/nike.html">Nike</a>
-                                    <a href="/html/mbl.html">MLB</a>
+                                    <a href="/html/mlb.html">MLB</a>
                                     <a href="/html/converse.html">Converse</a>
                                     <a href="/html/vans.html">Vans</a>
                                     <a href="/html/fila.html">Fila</a>
@@ -41,8 +45,8 @@
                             </div>
                         </div>
                     </li>
-                    <li class="list-item"><a class="list-item-a" href="">Sale</a></li>
-                    <li class="list-item"><a class="list-item-a" href="">Tin Tức</a></li>
+                    <li class="list-item"><a class="list-item-a" href="/html/sale.html">Sale</a></li>
+                    <li class="list-item"><a class="list-item-a" href="">Phiên bản giới hạn</a></li>
                     <li class="list-item"><a class="list-item-a" href="">FAQ</a></li>
                 </ul>
             </div>
@@ -54,7 +58,7 @@
                     <i class="fa-regular fa-image search-active icon"></i>
                 </li>
                 <li class="item"><a href=""><i class="fa-solid fa-cart-shopping icon"></i></a></li>
-                <li class="item"><a href="/html/register.html"><i class="fa-solid fa-user icon"></i></a></li>
+                <li class="item"><a href="/html/login.html"><i class="fa-solid fa-user icon"></i></a></li>
             </ul>
         </header>
 
@@ -67,7 +71,8 @@
                 <a href="/html/vans.html"><img style="width:100%; height: 630px;" src="/img/vans/vans2.jpg" alt="">
                     <div class="show-more">Xem Thêm</div>
                 </a>
-                <a href="/html/converse.html"><img style="width:100%; height: 630px;" src="/img/converse/conversee.jpg" alt="">
+                <a href="/html/converse.html"><img style="width:100%; height: 630px;" src="/img/converse/conversee.jpg"
+                        alt="">
                     <div class="show-more">Xem Thêm</div>
                 </a>
                 <a href="/html/fila.html"><img style="width:100%; height: 630px;" src="/img/fila/fila.jpg" alt="">
@@ -76,13 +81,16 @@
                 <a href="/html/mlb.html"><img style="width:100%; height: 630px;" src="/img/mlb/mlb.png" alt="">
                     <div class="show-more">Xem Thêm</div>
                 </a>
-            </div>
+            </div> 
 
             <!-- best - selling product -->
             <div class="best-selling">
                 <h3 class="heading">SẢN PHẨM BÁN CHẠY</h3>
                 <div class="best-selling-body autoplay">
                     <div class="box-product">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/mlb/MLB-Bigball.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -99,6 +107,9 @@
                         </div>
                     </div>
                     <div class="box-product">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/nike/nikeAirForceAf1.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -115,6 +126,9 @@
                         </div>
                     </div>
                     <div class="box-product">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/vans/vans-black.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -131,6 +145,9 @@
                         </div>
                     </div>
                     <div class="box-product">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/nike/nikeAirForceAf1.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -147,6 +164,9 @@
                         </div>
                     </div>
                     <div class="box-product">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/nike/nikeAirForceAf1.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -163,6 +183,9 @@
                         </div>
                     </div>
                     <div class="box-product">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/nike/nikeAirForceAf1.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -179,6 +202,9 @@
                         </div>
                     </div>
                     <div class="box-product">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/nike/nikeAirForceAf1.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -234,6 +260,9 @@
                 </h3>
                 <div id="product-product" class="product-product">
                     <div class="box-product modifier">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/nike/Nike-Air-Force-1-Shadow-Pale-Ivory.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -250,6 +279,9 @@
                         </div>
                     </div>
                     <div class="box-product modifier">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/nike/Nike-Air-Force-1-Shadow-Pale-Ivory.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -266,6 +298,9 @@
                         </div>
                     </div>
                     <div class="box-product modifier">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/nike/Nike-Air-Force-1-Shadow-Pale-Ivory.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -282,6 +317,9 @@
                         </div>
                     </div>
                     <div class="box-product modifier">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/nike/Nike-Air-Force-1-Shadow-Pale-Ivory.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -298,6 +336,9 @@
                         </div>
                     </div>
                     <div class="box-product modifier">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/nike/Nike-Air-Force-1-Shadow-Pale-Ivory.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -314,6 +355,9 @@
                         </div>
                     </div>
                     <div class="box-product modifier">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/nike/Nike-Air-Force-1-Shadow-Pale-Ivory.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -330,6 +374,9 @@
                         </div>
                     </div>
                     <div class="box-product modifier">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/nike/Nike-Air-Force-1-Shadow-Pale-Ivory.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -346,6 +393,9 @@
                         </div>
                     </div>
                     <div class="box-product modifier">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/nike/Nike-Air-Force-1-Shadow-Pale-Ivory.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -362,6 +412,9 @@
                         </div>
                     </div>
                     <div class="box-product modifier">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/nike/Nike-Air-Force-1-Shadow-Pale-Ivory.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -378,6 +431,9 @@
                         </div>
                     </div>
                     <div class="box-product modifier">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/nike/Nike-Air-Force-1-Shadow-Pale-Ivory.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -394,6 +450,9 @@
                         </div>
                     </div>
                     <div class="box-product modifier">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/nike/Nike-Air-Force-1-Shadow-Pale-Ivory.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -410,6 +469,9 @@
                         </div>
                     </div>
                     <div class="box-product modifier">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/nike/Nike-Air-Force-1-Shadow-Pale-Ivory.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -426,6 +488,9 @@
                         </div>
                     </div>
                     <div class="box-product modifier">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/nike/Nike-Air-Force-1-Shadow-Pale-Ivory.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -442,6 +507,9 @@
                         </div>
                     </div>
                     <div class="box-product modifier">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/nike/Nike-Air-Force-1-Shadow-Pale-Ivory.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -458,6 +526,9 @@
                         </div>
                     </div>
                     <div class="box-product modifier">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/nike/Nike-Air-Force-1-Shadow-Pale-Ivory.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -474,6 +545,9 @@
                         </div>
                     </div>
                     <div class="box-product modifier">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/nike/Nike-Air-Force-1-Shadow-Pale-Ivory.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -490,6 +564,9 @@
                         </div>
                     </div>
                     <div class="box-product modifier">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/nike/Nike-Air-Force-1-Shadow-Pale-Ivory.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -506,6 +583,9 @@
                         </div>
                     </div>
                     <div class="box-product modifier">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/nike/Nike-Air-Force-1-Shadow-Pale-Ivory.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -522,6 +602,9 @@
                         </div>
                     </div>
                     <div class="box-product modifier">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/nike/Nike-Air-Force-1-Shadow-Pale-Ivory.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -538,6 +621,9 @@
                         </div>
                     </div>
                     <div class="box-product modifier">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/nike/Nike-Air-Force-1-Shadow-Pale-Ivory.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -554,6 +640,9 @@
                         </div>
                     </div>
                     <div class="box-product modifier">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/nike/Nike-Air-Force-1-Shadow-Pale-Ivory.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -570,6 +659,9 @@
                         </div>
                     </div>
                     <div class="box-product modifier">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/nike/Nike-Air-Force-1-Shadow-Pale-Ivory.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -586,6 +678,9 @@
                         </div>
                     </div>
                     <div class="box-product modifier">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/nike/Nike-Air-Force-1-Shadow-Pale-Ivory.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -602,6 +697,9 @@
                         </div>
                     </div>
                     <div class="box-product modifier">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/nike/Nike-Air-Force-1-Shadow-Pale-Ivory.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -618,6 +716,9 @@
                         </div>
                     </div>
                     <div class="box-product modifier">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/nike/Nike-Air-Force-1-Shadow-Pale-Ivory.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -634,6 +735,9 @@
                         </div>
                     </div>
                     <div class="box-product modifier">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/nike/Nike-Air-Force-1-Shadow-Pale-Ivory.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -650,6 +754,9 @@
                         </div>
                     </div>
                     <div class="box-product modifier">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/nike/Nike-Air-Force-1-Shadow-Pale-Ivory.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -666,6 +773,9 @@
                         </div>
                     </div>
                     <div class="box-product modifier">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/nike/Nike-Air-Force-1-Shadow-Pale-Ivory.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -682,6 +792,9 @@
                         </div>
                     </div>
                     <div class="box-product modifier">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/nike/Nike-Air-Force-1-Shadow-Pale-Ivory.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -698,6 +811,9 @@
                         </div>
                     </div>
                     <div class="box-product modifier">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/nike/Nike-Air-Force-1-Shadow-Pale-Ivory.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -723,7 +839,10 @@
                 <h3 class="heading">GIÀY CUSTOMIZE</h3>
                 <div class="best-selling-body autoplay">
                     <div class="box-product">
-                        <img src="/img/customize/nikeAirForceAf1-daisy-hoacuc.jpg"  class="box-img">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <img src="/img/customize/nikeAirForceAf1-daisy-hoacuc.jpg" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
                                 Giày Nike air Force Af1 'Daisy' Hoa cúc
@@ -739,6 +858,9 @@
                         </div>
                     </div>
                     <div class="box-product">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/customize/nikeAirForce1ShadownPaleIvory.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -755,6 +877,9 @@
                         </div>
                     </div>
                     <div class="box-product">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/nike/JordanPanda.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -771,6 +896,9 @@
                         </div>
                     </div>
                     <div class="box-product">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/nike/nikeAirForceAf1.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -787,6 +915,9 @@
                         </div>
                     </div>
                     <div class="box-product">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/nike/nikeAirForceAf1.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -803,6 +934,9 @@
                         </div>
                     </div>
                     <div class="box-product">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/nike/nikeAirForceAf1.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -819,6 +953,9 @@
                         </div>
                     </div>
                     <div class="box-product">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                         <img src="/img/nike/nikeAirForceAf1.jpg" alt="" class="box-img">
                         <div class="box-title">
                             <h3 class="box-header">
@@ -889,7 +1026,7 @@
                         </div>
                     </a>
                 </div>
-            </div> 
+            </div>
 
             <!-- Transport -->
             <div class="transport">

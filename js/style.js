@@ -92,15 +92,8 @@ function changePage(i) {
     loadItem();
 }
 
-// textBehind
-function textBehind() {
-    Value = document.getElementById('textBehind').value;
-    if (Value == 0) {
-        document.getElementById('textBehind').style.webkitLineClamp = 'unset';
-        document.getElementById('textBehind').value = '1';
-    }
-    else {
-        document.getElementById('textBehind').style.webkitLineClamp = '3';
-        document.getElementById('textBehind').value = '0';
-    }
-}
+//heart
+let likeButton = document.querySelector('.btn-like')
+likeButton.addEventListener('click', function (event) {
+    event.currentTarget.classList.toggle('pink');
+})

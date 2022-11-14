@@ -1,69 +1,187 @@
-.style-style {
+.website .body {
+    top: 20px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.body .brand {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    font-size: 22px;
+}
+
+/* Bộ lọc */
+.filter {
+    width: 100%;
+    height: 58px;
     display: flex;
+    /* margin-left: 16px; */
+    padding: 0 50px;
+    justify-content: space-between;
+    border: 1px solid var(--color-border);
+}
+
+/* ẩn bộ lọc */
+.hidden-filter {
+    padding: 19px 20px;
+    display: flex;
+    width: 20%;
     justify-content: space-between;
 }
 
-.box-style {
-    width: 27.3%;
-    max-width: 374px;
-    height: 326px;
-    overflow: hidden;
-    position: relative;
+.hidden-filter i {
     cursor: pointer;
 }
 
-.style-heading {
-    padding: 10px 0 20px 20px;
-    line-height: 16px;
-    font-size: 18px;
+.display {
+    display: none;
 }
 
-
-.box-style .box-img {
-    width: 100%;
-    height: 282px;
-    max-height: 282px;
-    overflow: hidden;
+/* kết quả */
+.result-filter {
+    padding: 19px 20px;
+    width: 60%;
+    border-left: 1px solid var(--color-border);
+    border-right: 1px solid var(--color-border);
 }
 
-.box-style img {
-    width: 100%;
-    height: 282px;
-    max-height: 282px;
-    /* position: relative;
-    -webkit-transition: all .4s linear;
-    transition: all .4s linear; */
+/* sắp xếp */
+.sort-filter {
+    width: 22%;
+    display: flex;
+    justify-content: space-between;
+    padding: 19px 20px;
     position: relative;
-    -webkit-transition: all 0.4s cubic-bezier(0.88, -0.99, 0, 1.81);
-    transition: all 0.4s cubic-bezier(0.88, -0.99, 0, 1.81);
 }
 
-.box-style:hover img {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-    overflow: hidden;
+.sort-scroll {
+    padding-left: 6px;
 }
 
-.introduce {
-    margin: 0 auto;
+.sort-scroll .offer {
+    font-weight: 600;
 }
 
-.introduce-text {
-    font-weight: lighter;
+.offer-sort {
+    width: 60%;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    line-height: 28px;
     font-size: 14px;
-    padding: 0 0 36px;
-}
-
-.introduce img {
-    width: 80%;
-    margin: 0 10%;
-}
-
-#textBehind {
-    padding: 36px 0 0;
-    text-overflow: ellipsis;
     overflow: hidden;
-    -webkit-box-orient: vertical;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 58px;
+    display: none;
+    z-index: 999;
+}
+
+.offer-sort li {
+    padding: 0 10px;
+}
+
+.offer-sort .active-offer {
+    padding: 0 10px;
+    width: 100%;
+    color: var(--color-footer);
+    background-color: rgb(56, 56, 255);
+}
+
+.offer-sort li:hover {
+    color: var(--color-footer);
+    background-color: rgb(56, 56, 255);
+}
+
+.sort-filter i {
+    cursor: pointer;
+}
+
+.body-filter {
+    width: 94%;
+    margin: 30px auto 0;
+    position: relative;
+}
+
+.left-filter {
+    width: 18%;
+}
+
+.style-shoes {
+    width: 100%;
+    position: relative;
+    border-top: 1px solid var(--color-border);
+    margin-bottom: 20px;
+}
+
+.heading-heading {
+    width: 100%;
+    display: flex;
+    padding: 20px 0;
+    justify-content: space-between;
+}
+
+.heading-filter {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 200;
+}
+
+.heading-heading span {
+    cursor: pointer;
+}
+
+#plus {
+    display: none;
+}
+
+.show {
+    display: none;
+}
+
+.style-shoes .style {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 28px;
+    animation: growth ease 0.25s;
+    transform-origin: 50% top;
+}
+
+.style-shoes .style .box-style {
+    max-width: 100px;
+    max-height: 75px;
+    /* margin: 20px 0; */
+    border: 1px solid var(--color-border);
+    cursor: pointer;
+}
+
+.box-style img{
+    width: 100%;
+    min-width: 90px;
+    height: 100%;
+    max-height: 50px;
+}
+
+.box-style p {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.style .box-size {
+    width: 20%;
+    height: 48px;
+    display: flex;
+    /* margin: auto; */
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--color-border);
+}
+
+.box-color {
+    width: 20%;
+    font-size: 24px;
+    justify-content: space-between;
 }

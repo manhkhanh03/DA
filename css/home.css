@@ -3,6 +3,11 @@
     height: 100%;
 }
 
+.website .body {
+    width: 90%;
+    margin: 84px auto 0;
+}
+
 .banner a {
     color: var(--color-footer);
 }
@@ -56,9 +61,16 @@
 .button-customize button {
     background: none;
     height: 40px;
-    width: 150px;
-    color: #0D6EFD;
-    border: 1px solid #0D6EFD;
-    border-radius: 8px;
+    width: 36%;
+    max-width: 280px;
+    color: var(--color);
+    border: 1px solid var(--color-border);
+    border-radius: 2px;
     font-size: 22px;
+}
+
+.button-customize button:hover {
+    background-color: #000000;
+    color: var(--color-footer);
+    transition: 0.25s linear;
 }

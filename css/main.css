@@ -4,6 +4,7 @@
     --color: #2f2f2f;
     --color-footer: #fff;
     --background-color-main: #f3f3f3;
+    --color-border: #e5e5e5;
 }
 
 * {
@@ -37,8 +38,23 @@ button {
 }
 
 .icon {
-    width: 20px;
     font-size: 20px;
+}
+
+.btn-like {
+    top: 2%;
+    left: 2%;
+    color: #d7d7d7;
+    position: absolute;
+}
+
+.btn-like:hover {
+    transform: scale(1.2);
+    transition: .25s ease;
+}
+
+.pink {
+    color: #ff5d78;
 }
 
 @keyframes growth {
@@ -53,17 +69,14 @@ button {
     }
 }
 
-/* 
-@keyframes borderBT {
-    from {
-
-    }
-} */
-
 /* sticky */
 .sticky {
     padding: 5px 0;
     border-bottom: 0.6px solid #e5e5e5;
+}
+
+.website {
+    width: 100%;
 }
 
 /* menu */
@@ -81,9 +94,17 @@ button {
     transition: all 0.5s ease-in-out;
 }
 
+#toggle {
+    font-size: 20px;
+    color: #000000;
+    cursor: pointer;
+    padding: 32px 0  32px 24px;
+    display: none;
+}
+
 .menu .navbar {
     width: 100%;
-    max-width: 740px;
+    max-width: 800px;
     height: 86px;
     padding-left: 64px;
     display: flex;
@@ -279,7 +300,6 @@ button {
 /* Body */
 .body {
     width: 100%;
-    max-width: 90%;
     margin: 84px auto 0;
 }
 
@@ -303,6 +323,7 @@ button {
     background-color: #EBEBEB;
     font-size: 14.4px;
     cursor: pointer;
+    position: relative;
 }
 
 .box-img {
