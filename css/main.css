@@ -362,12 +362,11 @@ button {
     justify-content: space-between;
     flex-wrap: wrap;
     padding-bottom: 10px;
-    max-height: 710px;
     overflow: hidden;
 }
 
 .product-product .modifier {
-    margin: 0 0 24px;
+    margin: 0 0 30px;
 }
 
 .see-more {
@@ -390,7 +389,6 @@ button {
 .listPage {
     height: 50px;
     text-align: center;
-    margin: 40px 0;
 }
 
 .listPage li {

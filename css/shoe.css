@@ -102,6 +102,8 @@
 .body-filter {
     width: 94%;
     margin: 30px auto 0;
+    display: flex;
+    justify-content: space-between;
     position: relative;
 }
 
@@ -133,7 +135,7 @@
     cursor: pointer;
 }
 
-#plus {
+.fa-plus {
     display: none;
 }
 
@@ -184,4 +186,8 @@
     width: 20%;
     font-size: 24px;
     justify-content: space-between;
+}
+
+.right-filter {
+    width: 78%;
 }
