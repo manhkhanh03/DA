@@ -28,6 +28,8 @@
     padding: 19px 20px;
     display: flex;
     width: 20%;
+    max-width: 255.82px;
+    min-width: 255.82px;
     justify-content: space-between;
 }
 
@@ -50,6 +52,7 @@
 /* sắp xếp */
 .sort-filter {
     width: 22%;
+    min-width: 200px;
     display: flex;
     justify-content: space-between;
     padding: 19px 20px;
@@ -77,6 +80,7 @@
     top: 58px;
     display: none;
     z-index: 999;
+    background-color: var(--background-color);
 }
 
 .offer-sort li {
@@ -100,20 +104,23 @@
 }
 
 .body-filter {
-    width: 94%;
+    width: 100%;
     margin: 30px auto 0;
+    padding: 0 80px;
     display: flex;
     justify-content: space-between;
     position: relative;
 }
 
 .left-filter {
-    width: 18%;
+    width: 284.68px;
+    max-width: 284.68px;
+    min-width: 284.68px;
 }
 
 .style-shoes {
-    width: 100%;
-    position: relative;
+    width: 80%;
+    position: relative; 
     border-top: 1px solid var(--color-border);
     margin-bottom: 20px;
 }
@@ -136,10 +143,6 @@
 }
 
 .fa-plus {
-    display: none;
-}
-
-.show {
     display: none;
 }
 
@@ -190,4 +193,8 @@
 
 .right-filter {
     width: 78%;
+}
+
+.margin {
+    margin: 0 20px 30px;
 }
