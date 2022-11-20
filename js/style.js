@@ -48,6 +48,9 @@ function unNavHidden() {
     })
 }
 
+unHidden();
+unNavHidden();
+
 // Ẩn bộ lọc
 function hiddenFilter() {
     if (document.getElementById('x').value == '0') {
