@@ -146,7 +146,7 @@
     display: none;
 }
 
-.style-shoes .style {
+.style {
     display: flex;
     flex-wrap: wrap;
     margin-left: 28px;
@@ -182,6 +182,7 @@
     /* margin: auto; */
     justify-content: center;
     align-items: center;
+    cursor: pointer;
     border: 1px solid var(--color-border);
 }
 
@@ -197,4 +198,16 @@
 
 .margin {
     margin: 0 20px 30px;
+}
+
+.show {
+    display: block;
+}
+
+.Hidden {
+    display: none;
+}
+
+.flex {
+    display: flex;
 }
