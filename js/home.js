@@ -22,11 +22,16 @@ function listPage() {
     document.querySelector('.listPage').innerHTML = '';
 
     // prev
-    if (thisPage != 1) {
+    if (thisPage >= 1) {
         let prev = document.createElement('li');
         prev.classList.add('fa-solid', 'fa-chevron-left');
-        prev.setAttribute('onclick', 'changePage(' + (thisPage - 1) + ')');
-        document.querySelector('.listPage').appendChild(prev);
+        if (thisPage > 1) {
+            prev.setAttribute('onclick', 'changePage(' + (thisPage - 1) + ')');
+            document.querySelector('.listPage').appendChild(prev);
+        }
+        else {
+            document.querySelector('.listPage').appendChild(prev);
+        }
     }
 
     for (i = 1; i <= count; i++) {
@@ -39,11 +44,15 @@ function listPage() {
     }
 
     // next
-    if (thisPage < count) {
+    if (thisPage <= count) {
         let next = document.createElement('li');
         next.classList.add('fa-solid', 'fa-chevron-right');
-        next.setAttribute('onclick', 'changePage(' + (thisPage + 1) + ')');
-        document.querySelector('.listPage').appendChild(next);
+        if (thisPage < count) {
+            next.setAttribute('onclick', 'changePage(' + (thisPage + 1) + ')');
+            document.querySelector('.listPage').appendChild(next);
+        }
+        else
+            document.querySelector('.listPage').appendChild(next);
     }
 }
 
@@ -51,3 +60,13 @@ function changePage(i) {
     thisPage = i;
     loadItem();
 }
+
+let like = document.getElementsByClassName('btn-like')
+
+for (i = 0; i < like.length; i++) {
+    like[i].addEventListener('click', function (event) {
+        event.currentTarget.classList.toggle('pink');
+    })
+}
+
+

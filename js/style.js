@@ -10,14 +10,52 @@ $(document).ready(function () {
 })
 
 //slickSlider
-$(document).ready(function () {
-    $('.autoplay').slick({
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
+function checkWidth() {
+    let selling = document.getElementById('best-selling').clientWidth
+
+    $(document).ready(function () {
+        if (selling >= 1220) {
+            $('.autoplay').slick({
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+            });
+        }
+        else if (selling >= 920) {
+            $('.autoplay').slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+            });
+        }
+        else if (selling >= 740) {
+            $('.autoplay').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+            });
+        }
+        else {
+            $('.autoplay').slick({
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+            });
+        }
     });
-});
+}
+
+// $(document).ready(function () {
+//     $(window).resize(function () {
+//         checkWidth()
+//     })
+// })
+
+checkWidth()
 
 // singleItem
 $(document).ready(function () {

@@ -186,6 +186,12 @@
     border: 1px solid var(--color-border);
 }
 
+.box-size:hover {
+    background-color: #000000;
+    color: var(--color-footer);
+    transition: 0.25s linear;
+}
+
 .box-color {
     width: 20%;
     font-size: 24px;
