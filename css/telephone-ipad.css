@@ -10,14 +10,15 @@
     }
 
     .navbar-btn {
+        text-align: center;
         width: 100%;
         flex-direction: column;
         display: none;
         height: 1000px;
-        top: -30px;
+        top: 60px;
         left: 0;
         position: absolute;
-        background-color: red;
+        background-color: var(--background-color);
     }
 
     .navbar-btn .list-item {
@@ -30,6 +31,28 @@
 
     .list-item-a::after {
         display: none;
+    }
+
+    .list-brand {
+        position: absolute;
+        top: -44px;
+        left: 0;
+        /* display: block; */
+        box-shadow: none;
+        /* z-index: 1000; */
+        /* animation: none; */
+        transform: unset;
+    }
+
+    .navbar .nav-item:hover .list-brand {
+        display: block;
+    }
+
+    .navbar .item-nav:hover .list-brand {
+        display: block;
+        position: absolute;
+        width: 100%;
+        right: 0;
     }
 
     .nav-item::after {
