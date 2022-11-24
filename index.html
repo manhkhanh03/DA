@@ -14,14 +14,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
         integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="/css/main.css">
-        <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="/css/telephone-ipad.css">
 </head>
 
 <body>
 
-    <div class="website">
+    <div class="website" id="website">
         <header class="menu">
             <div id="toggle">
                 <i class="fa-solid fa-bars"></i>
@@ -30,8 +30,7 @@
                 <a class="nav-img" href=""><img src="/img/logo-brand/MHL.png" alt="MHL"></a>
                 <ul class="navbar-btn" id="navbar-btn">
                     <li class="list-item"><a class="list-item-a" href="/html/index.html">Trang Chủ</a></li>
-                    <li id="list-item"  class="list-item nav-item"
-                        style="cursor: pointer; color: var(--color);">
+                    <li id="list-item" class="list-item nav-item" style="cursor: pointer; color: var(--color);">
                         <div class="list-item-a">
                             Giày Sneacker
                             <div class="list-brand list-brand-brand">
@@ -48,11 +47,10 @@
                     <li class="list-item"><a class="list-item-a" href="/html/sale.html">Sale</a></li>
                     <li class="list-item"><a class="list-item-a" href="/html/limitedEdition.html">Phiên bản giới
                             hạn</a></li>
-                    <li id="item-nav" class="list-item item-nav" 
-                        style="cursor: pointer; color: var(--color);">
+                    <li id="item-nav" class="list-item item-nav" style="cursor: pointer; color: var(--color);">
                         <div class="list-item-a list-faq">
                             FAQ
-                            <div class="list-brand">
+                            <div class="list-brand brand-faq">
                                 <div class="list-list">
                                     <a href="">Kiểm tra trạng thái đơn hàng</a>
                                     <a href="">Đơn đặt hàng/ trả lại</a>
@@ -80,26 +78,25 @@
         <div class="body">
             <!-- banner -->
             <div class="banner single-item-rtl">
-                <a href="/html/nike.html"><img style="width:100%; height: 630px;" src="/img/nike/nike.jpg" alt="">
+                <a href="/html/nike.html"><img class="banner-img" src="/img/nike/nike.jpg" alt="">
                     <div class="show-more">Xem Thêm</div>
                 </a>
-                <a href="/html/vans.html"><img style="width:100%; height: 630px;" src="/img/vans/vans2.jpg" alt="">
+                <a href="/html/vans.html"><img class="banner-img" src="/img/vans/vans2.jpg" alt="">
                     <div class="show-more">Xem Thêm</div>
                 </a>
-                <a href="/html/converse.html"><img style="width:100%; height: 630px;" src="/img/converse/conversee.jpg"
-                        alt="">
+                <a href="/html/converse.html"> <img class="banner-img" src="/img/converse/conversee.jpg" alt="">
                     <div class="show-more">Xem Thêm</div>
                 </a>
-                <a href="/html/fila.html"><img style="width:100%; height: 630px;" src="/img/fila/fila.jpg" alt="">
+                <a href="/html/fila.html"><img class="banner-img" src="/img/fila/fila.jpg" alt="">
                     <div class="show-more">Xem Thêm</div>
                 </a>
-                <a href="/html/mlb.html"><img style="width:100%; height: 630px;" src="/img/mlb/mlb.png" alt="">
+                <a href="/html/mlb.html"><img class="banner-img" src="/img/mlb/mlb.png" alt="">
                     <div class="show-more">Xem Thêm</div>
                 </a>
             </div>
 
             <!-- best - selling product -->
-            <div  class="best-selling" id="best-selling">
+            <div class="best-selling" id="best-selling">
                 <h3 class="heading">SẢN PHẨM BÁN CHẠY</h3>
                 <div class="best-selling-body autoplay">
                     <div class="box-product">
@@ -113,7 +110,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -132,7 +128,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -151,7 +146,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -170,7 +164,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -189,7 +182,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -208,7 +200,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -227,7 +218,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -285,7 +275,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -304,7 +293,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -323,7 +311,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -342,7 +329,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -361,7 +347,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -380,7 +365,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -399,7 +383,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -418,7 +401,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -437,7 +419,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -456,7 +437,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -475,7 +455,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -494,7 +473,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -513,7 +491,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -532,7 +509,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -551,7 +527,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -570,7 +545,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -589,7 +563,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -608,7 +581,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -627,7 +599,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -646,7 +617,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -665,7 +635,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -684,7 +653,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -703,7 +671,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -722,7 +689,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -741,7 +707,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -760,7 +725,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -779,7 +743,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -798,7 +761,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -817,7 +779,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -836,7 +797,24 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
+                                <div class="shoe-color">
+                                    <i class="fa-solid fa-circle"></i>
+                                    <i class="fa-solid fa-circle" style="color: red"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-product modifier">
+                        <div class="btn-like">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <img src="/img/nike/Nike-Air-Force-1-Shadow-Pale-Ivory.jpg" alt="" class="box-img">
+                        <div class="box-title">
+                            <h3 class="box-header">
+                                Nike-Air-Force-1-Shadow-Pale-Ivory
+                            </h3>
+                            <div class="box-price">
+                                <span class="price">Giá: 500.000đ</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -846,7 +824,7 @@
                     </div>
 
                 </div>
-                <ul class="listPage"></ul>
+                <ul class="listPage" id="listPage"></ul>
             </div>
 
             <!-- Customize -->
@@ -864,7 +842,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 450.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -883,7 +860,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -902,7 +878,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -921,7 +896,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -940,7 +914,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -959,7 +932,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -978,7 +950,6 @@
                             </h3>
                             <div class="box-price">
                                 <span class="price">Giá: 500.000đ</span>
-                                <span class="sales">Lượt bán: 1.5k</span>
                                 <div class="shoe-color">
                                     <i class="fa-solid fa-circle"></i>
                                     <i class="fa-solid fa-circle" style="color: red"></i>
@@ -1047,20 +1018,27 @@
             <div class="transport">
                 <div class="box-transport">
                     <i class="fa-solid fa-truck-fast"></i>
-                    <h4>Giao hàng nhanh, miễn phí</h4>
-                    <p>Các đơn hàng trên 500k được giao hàng miễn phí.</p>
+                    <div>
+                        <h4>Giao hàng nhanh, miễn phí</h4>
+                        <p>Các đơn hàng trên 500k được giao hàng miễn phí.</p>
+                    </div>
                 </div>
                 <div class="box-transport">
                     <i class="fa-solid fa-rotate-left"></i>
-                    <h4>Hoàn trả không gặp rắc rối</h4>
-                    <p>Không hài lòng? Trả lại đơn đặt hàng của bạn
-                        trong vòng 30 ngày là miễn phí.</p>
+                    <div>
+                        <h4>Hoàn trả không gặp rắc rối</h4>
+                        <p>Không hài lòng? Trả lại đơn đặt hàng của bạn
+                            trong vòng 30 ngày là miễn phí.</p>
+                    </div>
                 </div>
                 <div class="box-transport">
                     <i class="fa-solid fa-circle-info"></i>
-                    <h4>Theo dõi gói hàng của bạn</h4>
-                    <p>Bạn có muốn biết đơn hàng của bạn ở đâu không? Bạn có thể kiểm tra tình trạng đơn hàng của mình
-                        bất cứ lúc nào.</p>
+                    <div>
+                        <h4>Theo dõi gói hàng của bạn</h4>
+                        <p>Bạn có muốn biết đơn hàng của bạn ở đâu không? Bạn có thể kiểm tra tình trạng đơn hàng của
+                            mình
+                            bất cứ lúc nào.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1133,7 +1111,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"
         integrity="sha512-eP8DK17a+MOcKHXC5Yrqzd8WI5WKh6F1TIk5QZ/8Lbv+8ssblcz7oGC8ZmQ/ZSAPa7ZmsCU4e/hcovqR8jfJqA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="/css/slick.css">
     <script src="/js/home.js"></script>
     <script src="/js/style.js"></script>
 </body>

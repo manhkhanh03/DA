@@ -12,6 +12,16 @@
     font-size: 22px;
 }
 
+.barsButton {
+    width: 120px;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 40px;
+    border: 1px solid #000000;
+    display: none;
+    background-color: var(--background-color);
+}
+
 /* Bộ lọc */
 .filter {
     width: 100%;

@@ -23,10 +23,22 @@
 
     .navbar-btn .list-item {
         overflow: unset;
+        margin: 20px 0;
     }
 
     #toggle {
         display: block;
+    }
+
+    .list-item-a::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 25%;
+        /* display: flex; */
+        width: 50%;
+        height: 2px;
+        background-color: var(--color-border);
     }
 
     .list-item-a::after {
@@ -35,13 +47,32 @@
 
     .list-brand {
         position: absolute;
-        top: -44px;
+        top: -78px;
         left: 0;
-        /* display: block; */
+        height: 270px;
         box-shadow: none;
-        /* z-index: 1000; */
-        /* animation: none; */
-        transform: unset;
+        z-index: 1000;
+        transform-origin: 50% top;
+        overflow: unset;
+    }
+
+    .list-item-a .list-brand .list-list a {
+        padding: 16px 0;
+    }
+
+    .list-list a::after {
+        content: '';
+        display: block;
+        position: relative;
+        bottom: 0;
+        left: 25%;
+        width: 50%;
+        height: 2px;
+        background-color: var(--color-border);
+    }
+
+    .brand-faq {
+        top: -242px;
     }
 
     .navbar .nav-item:hover .list-brand {
@@ -62,11 +93,36 @@
         margin-right: 0;
     }
 
+    .search:focus {
+        max-width: 248px;
+    }
+
     .body {
         max-width: 96%;
     }
 
-    .search:focus {
-        max-width: 248px;
+    .all-filter .filter {
+        display: none;
     }
+
+    .left-filter {
+        display: none;
+    }
+
+    .barsButton {
+        display: block;
+    }
+
+    .slick-slider
+    .slick-next,
+    .slick-prev {
+        display: none;
+        position: absolute;
+        left: -100%;
+    }
+
+    
+
+    
 }
+

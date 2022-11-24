@@ -431,6 +431,7 @@ button {
     text-align: center;
     display: flex;
     justify-content: space-around;
+    position: relative;
 }
 
 .box-transport {
@@ -446,7 +447,7 @@ button {
 
 .box-transport h4 {
     padding: 16px 0;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .box-transporot p {

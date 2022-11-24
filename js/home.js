@@ -1,7 +1,14 @@
 
 // Phan trang
+let widthPage = document.getElementById('website').clientWidth
+
+let limit;
+if (widthPage >= 740 && widthPage <= 1024)
+    limit = 12;
+else
+    limit = 10;
+
 let thisPage = 1;
-let limit = 10;
 let list = document.querySelectorAll('.product-product .box-product');
 
 function loadItem() {
@@ -62,11 +69,9 @@ function changePage(i) {
 }
 
 let like = document.getElementsByClassName('btn-like')
-
 for (i = 0; i < like.length; i++) {
     like[i].addEventListener('click', function (event) {
         event.currentTarget.classList.toggle('pink');
     })
 }
-
 

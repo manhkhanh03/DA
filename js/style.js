@@ -10,59 +10,50 @@ $(document).ready(function () {
 })
 
 // toggle
-$(document).ready(function() {
-    $('#toggle').click(function() {
+$(document).ready(function () {
+    $('#toggle').click(function () {
         $('.navbar-btn').slideToggle()
-    })
-})
-$(document).ready(function() {
-    $('#list-item').click(function() {
-        $('.list-brand-brand').slideToggle()
-        $('.list-brand-brand').show()
     })
 })
 
 //slickSlider
-function checkWidth() {
-    let selling = document.getElementById('best-selling').clientWidth
+let selling = document.getElementById('best-selling').clientWidth
 
-    $(document).ready(function () {
-        if (selling >= 1220) {
-            $('.autoplay').slick({
-                slidesToShow: 5,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 2000,
-            });
-        }
-        else if (selling >= 920) {
-            $('.autoplay').slick({
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 2000,
-            });
-        }
-        else if (selling >= 740) {
-            $('.autoplay').slick({
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 2000,
-            });
-        }
-        else {
-            $('.autoplay').slick({
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 2000,
-            });
-        }
-    });
-}
+$(document).ready(function () {
+    if (selling >= 1024) {
+        $('.autoplay').slick({
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000
+        });
+    }
+    else if (selling >= 920) {
+        $('.autoplay').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000
+        });
+    }
+    else if (selling >= 400) {
+        $('.autoplay').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000
+        });
+    }
+    else {
+        $('.autoplay').slick({
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000
+        });
+    }
+});
 
-checkWidth()
 
 // singleItem
 $(document).ready(function () {
@@ -105,9 +96,6 @@ function hiddenFilter() {
         document.getElementById('hidden-filter').style.minWidth = '255.82px';
         document.getElementById('right-filter').style.width = '78%';
         document.getElementById('left-filter').style.display = 'block';
-        // let modifier = document.getElementsByClassName('modifier')
-        // for (i = 0; i < modifier.length; i++)
-        //     modifier[i].classList.remove('margin')
         document.getElementById('x').value = '1';
     } else {
         document.getElementById('result-filter').style.width = '72%';
@@ -116,9 +104,6 @@ function hiddenFilter() {
         document.getElementById('right-filter').style.width = '100%';
         document.getElementById('hidden').style.display = 'none';
         document.getElementById('left-filter').style.display = 'none';
-        // let modifier = document.getElementsByClassName('modifier')
-        // for (i = 0; i < modifier.length; i++)
-        //     modifier[i].classList.add('margin')
         document.getElementById('x').value = '0';
     }
 };
@@ -188,3 +173,4 @@ for (i = 0; i < likeButton.length; i++) {
         event.currentTarget.classList.toggle('pink');
     })
 }
+
