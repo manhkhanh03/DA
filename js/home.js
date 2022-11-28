@@ -2,11 +2,25 @@
 // Phan trang
 let widthPage = document.getElementById('website').clientWidth
 
-let limit;
-if (widthPage >= 740 && widthPage <= 1024)
+let limit = 10;
+if (widthPage >= 400 && widthPage <= 1024)
     limit = 12;
 else
     limit = 10;
+$(document).ready(function () {
+    $(window).resize(function () {
+        widthPage = document.getElementById('website').clientWidth
+        console.error(widthPage)
+        if (widthPage >= 400 && widthPage <= 1024){
+            limit = 12;
+            loadItem()
+        }
+        else{
+            limit = 10;
+            loadItem()
+        }
+    })
+})
 
 let thisPage = 1;
 let list = document.querySelectorAll('.product-product .box-product');
@@ -67,6 +81,7 @@ function changePage(i) {
     thisPage = i;
     loadItem();
 }
+
 
 let like = document.getElementsByClassName('btn-like')
 for (i = 0; i < like.length; i++) {

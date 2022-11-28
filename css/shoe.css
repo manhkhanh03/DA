@@ -122,6 +122,18 @@
     position: relative;
 }
 
+.close-filter {
+    margin: 10px 0;
+    width: 100%;
+    text-align: right;
+    padding: 10px 0;
+    border-radius: 40px;
+    border: none;
+    font-size: 20px;
+    display: none;
+    background-color: var(--background-color);
+}
+
 .left-filter {
     width: 284.68px;
     max-width: 284.68px;
@@ -209,7 +221,7 @@
 }
 
 .right-filter {
-    width: 78%;
+    width: 100%;
 }
 
 .margin {
@@ -227,3 +239,4 @@
 .flex {
     display: flex;
 }
+
