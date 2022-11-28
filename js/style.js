@@ -127,7 +127,6 @@ function hiddenFilter() {
     let hidden = document.getElementById('hidden')
     let resultFilter = document.getElementById('result-filter')
     let hiddenFilter = document.getElementById('hidden-filter')
-    let rightFilter = document.getElementById('right-filter')
     let leftFilter = document.getElementById('left-filter')
     let x = document.getElementById('x')
 
@@ -136,7 +135,6 @@ function hiddenFilter() {
         resultFilter.style.width = '60%';
         hiddenFilter.style.maxWidth = '20%';
         hiddenFilter.style.minWidth = '255.82px';
-        // rightFilter.style.width = '78%';
         leftFilter.style.display = 'block';
         x.value = '1';
     } else {
@@ -144,7 +142,6 @@ function hiddenFilter() {
         resultFilter.style.width = '72%';
         hiddenFilter.style.maxWidth = '2%';
         hiddenFilter.style.minWidth = '40px';
-        // rightFilter.style.width = '100%';
         leftFilter.style.display = 'none';
         x.value = '0';
     }
