@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shoes MHL Vans</title>
+    <title>Shoes MHL Nike</title>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
@@ -23,10 +23,10 @@
 
     <div class="website" id="website">
         <header class="menu">
-            <div id="toggle" value="0" onclick="display()">
+            <div id="toggle">
                 <i class="fa-solid fa-bars"></i>
             </div>
-            <div class="navbar"> 
+            <div class="navbar">
                 <a class="nav-img focus-input" href=""><img src="/img/logo-brand/MHL.png" alt="MHL"></a>
                 <ul class="navbar-btn" id="navbar-btn">
                     <li class="list-item"><a class="list-item-a" href="/html/index.html">Trang Chủ</a></li>
@@ -77,18 +77,18 @@
             </ul>
         </header>
 
-        <div class="body" id="mlb">
+        <div class="body" id="nike">
             <!-- Thương hiệu -->
             <div class="brand">
-                THƯƠNG HIỆU VANS
+                THƯƠNG HIỆU NIKE
             </div>
 
             <!-- bộ lọc  -->
             <div class="all-filter">
-                <button class="barsButton">
-                    <i class="fa-solid fa-sliders"></i>
-                </button>
                 <div class="filter">
+                    <button class="barsButton">
+                        <i class="fa-solid fa-sliders"></i>
+                    </button>
                     <div class="hidden-filter" id="hidden-filter">
                         <div class="hidden" id="hidden">
                             <p>Ẩn bộ lọc</p>
@@ -855,14 +855,12 @@
                     $('.hidden-filter').css('max-width', '20%')
                     $('.hidden-filter').css('min-width', '255.82px')
                     $('#x').css('value', '1')
-                }
-                else {
+                }else {
                     console.error(checkWidth)
                     $('.left-filter').hide()
                 }
             })
         })
-
     </script>
 </body>
 

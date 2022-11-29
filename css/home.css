@@ -241,7 +241,7 @@
     }
 
     .footer {
-        max-height: 360px;
+        /* max-height: 360px; */
     }
 
     .footer-heading {
@@ -340,7 +340,7 @@
     }
 
     .footer {
-        max-height: 270px;
+        /* max-height: 270px; */
     }
 
     .footer-heading {

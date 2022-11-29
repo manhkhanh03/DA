@@ -823,8 +823,22 @@ button {
         font-size: 18px;
     }
 
-    .all-filter .filter {
+    .filter {
+        border: none;
+        display: flex;
+        padding: 0;
+        justify-content: space-between;
+    }
+
+    .sort-filter,
+    .hidden-filter {
         display: none;
+    }
+
+    .result-filter {
+        border: none;
+        padding: 12px 0;
+        text-align: right;
     }
     
     .barsButton {
