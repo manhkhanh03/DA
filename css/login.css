@@ -1,11 +1,14 @@
 html, body {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 
 .login {
     width: 100%;
     height: 100%;
+    position: absolute;
+    min-height: 600px;
     /* margin: 20% auto; */
     /* background-image: url(/img/logo-brand/loginWeb.jpg); */
     display: flex;
@@ -48,7 +51,7 @@ html, body {
 
 .form-input input {
     height: 30px;
-    margin: 20px auto;
+    margin: 12px auto;
     padding-left: 10px;
     width: 66%;
     outline: none;

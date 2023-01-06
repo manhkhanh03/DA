@@ -1,6 +1,165 @@
+// all in input and thanh toan
+var allInput = document.getElementsByClassName('checkbox')
+var action = document.getElementById('action')
+var sumProduct = document.getElementById('sumProduct')
+var sumPrice = document.getElementById('sumPrice')
+action.onclick = function () {
+    if (this.checked) {
+        $('input[type=checkbox]').prop('checked', true)
+    } else {
+        $('input[type=checkbox]').prop('checked', false)
+    }
+}
+
+// tang tong so luong san pham
+
+// Tang so luong san pham
+let plus = document.getElementsByClassName('plus')
+let minus = document.getElementsByClassName('minus')
+let node = document.getElementsByClassName('p')
+let sum = document.getElementsByClassName('sum-product')
+let money = document.getElementsByClassName('amount-money')
+let rootPrice = document.getElementsByClassName('root-price')
+let sp, price
+for (let j = 0; j < node.length; j++) {
+
+    sp = [j]
+    price = [j]
+    if (sum[j].innerHTML == 0) {
+        minus[j].classList.add('P-N')
+        node[j].innerHTML = sum[j].innerHTML
+        plus[j].classList.add('P-N')
+    }
+    else {
+        let amountMoney = [j]
+        amountMoney[j] = money[j].innerHTML
+        let count = [j]
+        count[j] = node[j].innerHTML
+        let textStock
+        var stock = document.getElementsByClassName('stock')
+        plus[j].addEventListener('click', function () {
+            if (node[j].innerHTML < sum[j].innerHTML) {
+                if (node[j].innerHTML == 0)
+                    minus[j].classList.remove('P-N')
+                ++node[j].innerHTML
+                count[j] = node[j].innerHTML
+                money[j].innerHTML = Number(amountMoney[j]) + Number(money[j].innerHTML)
+                if (allInput[j].value == 1)
+                    check(node, money)
+            }
+            else if (count[j] == sum[j].innerHTML) {
+                plus[j].classList.add('P-N')
+                textStock = document.createElement('p')
+                textStock.innerText = 'Hết hàng'
+                stock[j].appendChild(textStock)
+                count[j]++
+            }
+            console.log(sp[j], price[j])
+        })
+
+        minus[j].addEventListener('click', function () {
+            if (count[j] > sum[j].innerHTML) {
+                plus[j].classList.remove('P-N')
+                stock[j].removeChild(textStock)
+                count[j]--
+            }
+            if (node[j].innerHTML > 0) {
+                --node[j].innerHTML
+                money[j].innerHTML = Number(money[j].innerHTML) - Number(amountMoney[j])
+                if (allInput[j].value == 1)
+                    check(node, money)
+                if (node[j].innerHTML == 0)
+                    minus[j].classList.add('P-N')
+            }
+            console.log(sp[j], price[j])
+        })
+    }
+}
+
+function Minus(node, money, i) {
+    if (allInput[i].value == 1) {
+        sp[i] = Number(node[i].innerHTML)
+        price[i] = Number(money[i].innerHTML)
+    }
+    else {
+        sp[i] = 0
+        price[i] = 0
+    }
+    sumProduct.innerHTML = sp[i]
+    sumPrice.innerHTML = price[i]
+}
+
+function Plus(node, money, i) {
+    if (allInput[i].value == 1) {
+        sp[i] = Number(node[i].innerHTML)
+        price[i] = Number(money[i].innerHTML)
+    } else {
+        sp[i] = 0
+        price[i] = 0
+    }
+    sumProduct.innerHTML = sp[i]
+    sumPrice.innerHTML = price[i]
+}
+
+
+function check(node, money) {
+    let b = 0
+    let a = 0
+    let c = 0
+    for (let i = 0; i < allInput.length; i++) {
+
+        allInput[i].addEventListener('click', function () {
+            if (allInput[i].checked)
+                allInput[i].value = '1'
+            else
+                allInput[i].value = '0'
+
+            if (allInput[i].value == 1) {
+                // if (node[i].innerHTML != 0) {
+                a += Number(allInput[i].value)
+                Plus(node, money, i)
+
+                c += Number(money[i].innerHTML)
+                if (a >= 2) {
+                    if (node[i].innerHTML >= 2) {
+                        console.log(b, sp[i])
+                        b += sp[i]
+                    }
+                } else {
+                    console.log(money[i].innerHTML)
+                    c = Number(money[i].innerHTML)
+                }
+                b += Number(node[i].innerHTML)
+            }
+            else {
+                Minus(node, money, i)
+                if (node[i].innerHTML != 0) {
+                    c -= Number(money[i].innerHTML)
+                    b--
+                    if (node[i].innerHTML >= 2) {
+                        c = Number(money[i].innerHTML) - Number(money[i].innerHTML)
+                        b = Number(node[i].innerHTML) - Number(node[i].innerHTML)
+                    }
+                    if (a >= 2) {
+                    }
+                }
+                else {
+                    c = 0
+                    b = 0
+                }
+                a--
+            }
+            console.log(a, b, c)
+
+            sumProduct.innerHTML = b
+            sumPrice.innerHTML = c
+            console.log(sp, price)
+        })
+    }
+}
+check(node, money)
+
 // focus input
-
-
 function focusInput(windowWidth) {
     if (windowWidth <= 520) {
         console.log('wd:' + windowWidth)
@@ -16,13 +175,46 @@ function focusInput(windowWidth) {
         })
 
 }
+
+// hien thi thanh navbar
+function grow(windowWidth) {
+    if (windowWidth > 1024)
+        document.getElementById('navbar-btn').style.display = 'flex'
+    else {
+        document.getElementById('navbar-btn').style.display = 'none'
+    }
+}
+
+function onclick(windowWidth) {
+    $(document).ready(function () {
+        if (windowWidth <= 1024) {
+            $('.navbar li').click(function () {
+                document.getElementById('navbar-btn').style.display = 'none'
+            })
+        }
+        else {
+            $('.navbar li').click(function () {
+                document.getElementById('navbar-btn').style.display = 'flex'
+            })
+        }
+    })
+}
+
 let windowWidth = document.getElementById('website').clientWidth
 focusInput(windowWidth)
+grow(windowWidth)
+onclick(windowWidth)
+reADD(windowWidth)
+sort(windowWidth)
 
 $(document).ready(function () {
     $(window).resize(function () {
         windowWidth = document.getElementById('website').clientWidth
         focusInput(windowWidth)
+        grow(windowWidth)
+        onclick(windowWidth)
+        reADD(windowWidth)
+        sort(windowWidth)
     })
 })
 
@@ -44,6 +236,7 @@ $(document).ready(function () {
     })
 })
 
+
 //slickSlider
 let selling
 
@@ -58,7 +251,7 @@ $(document).ready(function () {
             autoplaySpeed: 2000,
         });
     }
-    else if (selling >= 920) {
+    else if (selling >= 740) {
         $('.autoplay').slick({
             slidesToShow: 4,
             slidesToScroll: 1,
@@ -66,7 +259,7 @@ $(document).ready(function () {
             autoplaySpeed: 2000
         });
     }
-    else if (selling >= 400) {
+    else if (selling >= 320) {
         console.log(selling)
         $('.autoplay').slick({
             slidesToShow: 3,
@@ -120,95 +313,189 @@ function unNavHidden() {
 unHidden();
 unNavHidden();
 
-
-// Bo loc
-// Ẩn bộ lọc
-function hiddenFilter() {
-    let hidden = document.getElementById('hidden')
-    let resultFilter = document.getElementById('result-filter')
-    let hiddenFilter = document.getElementById('hidden-filter')
-    let leftFilter = document.getElementById('left-filter')
-    let x = document.getElementById('x')
-
-    if (x.value == '0') {
-        hidden.style.display = 'unset';
-        resultFilter.style.width = '60%';
-        hiddenFilter.style.maxWidth = '20%';
-        hiddenFilter.style.minWidth = '255.82px';
-        leftFilter.style.display = 'block';
-        x.value = '1';
-    } else {
-        hidden.style.display = 'none';
-        resultFilter.style.width = '72%';
-        hiddenFilter.style.maxWidth = '2%';
-        hiddenFilter.style.minWidth = '40px';
-        leftFilter.style.display = 'none';
-        x.value = '0';
+// bo loc
+$(document).ready(function () {
+    var x = $('.x').toArray()
+    var hidden = $('.hidden').toArray()
+    var resultFilter = $('.result-filter').toArray()
+    var hiddenFilter = $('.hidden-filter').toArray()
+    var leftFilter = $('.left-filter').toArray()
+    for (let i = 0; i < x.length; i++) {
+        x[i].addEventListener('click', function () {
+            if (x[i].value == '0') {
+                hidden[i].style.display = 'unset'
+                resultFilter[i].style.width = '60%';
+                hiddenFilter[i].style.maxWidth = '20%';
+                hiddenFilter[i].style.minWidth = '255.82px';
+                leftFilter[i].style.display = 'block';
+                x[i].value = '1'
+            } else {
+                hidden[i].style.display = 'none';
+                resultFilter[i].style.width = '72%';
+                hiddenFilter[i].style.maxWidth = '2%';
+                hiddenFilter[i].style.minWidth = '40px';
+                leftFilter[i].style.display = 'none';
+                x[i].value = '0';
+            }
+        })
     }
-};
+})
 
-// Sắp xếp bộ lọc
-function sortFilter() {
-    if (document.getElementById('down').value == '0') {
-        document.getElementById('offer-sort').style.display = 'none';
-        document.getElementById('down').value = '1';
-    }
-    else {
-        document.getElementById('offer-sort').style.display = 'block';
-        document.getElementById('down').value = '0';
+var offer = document.getElementsByClassName('offer-sort')
+// var sortScroll = document.getElementsByClassName('sort-scroll')
+var down = document.getElementsByClassName('down')
+console.log(offer)
+for (let i = 0; i < down.length; i++) {
+    down[i].addEventListener('click', function () {
+        offer[i].style.display = 'block'
+        offer[i].addEventListener('mouseleave', function () {
+            offer[i].style.display = 'none'
+        })
+    })
+}
+
+
+// Ẩn phong cách
+function reADD(windowWidth) {
+    var more = document.getElementsByClassName('more')
+
+    for (let i = 0; i < more.length; i++) {
+        if (windowWidth > 1024) {
+            more[i].classList.add('fa-minus')
+            more[i].classList.remove('fa-chevron-up')
+            more[i].classList.remove('fa-chevron-down')
+        } else {
+            more[i].classList.add('fa-chevron-up')
+            more[i].classList.remove('fa-plus')
+            more[i].classList.remove('fa-minus')
+        }
     }
 }
 
-// Ẩn phong cách
-let minusOne = document.getElementById('minusOne')
-let plusOne = document.getElementById('plusOne')
-let styleOne = document.getElementById('styleOne')
-let minusTwo = document.getElementById('minusTwo')
-let plusTwo = document.getElementById('plusTwo')
-let styleTwo = document.getElementById('styleTwo')
-let minusThree = document.getElementById('minusThree')
-let plusThree = document.getElementById('plusThree')
-let styleThree = document.getElementById('styleThree')
+function sort(windowWidth) {
+    var more = document.getElementsByClassName('more')
+    var style = document.getElementsByClassName('style')
+    var info = document.getElementsByClassName('info')
+    console.log(info)
 
-minusOne.addEventListener('click', function (event) {
-    event.currentTarget.style.display = 'none'
-    styleOne.style.display = 'none'
-    plusOne.style.display = 'block'
-})
-plusOne.addEventListener('click', function (event) {
-    event.currentTarget.style.display = 'none'
-    styleOne.style.display = 'flex'
-    minusOne.style.display = 'block'
-})
+    for (let i = 0; i < more.length; i++) {
+        more[i].addEventListener('click', function () {
+            if (more[i].value == '0') {
+                more[i].value = '1'
+                style[i].style.display = 'flex'
+                if (windowWidth > 1024) {
+                    more[i].classList.remove('fa-plus')
+                    more[i].classList.add('fa-minus')
+                    more[i].classList.remove('fa-chevron-up')
+                    more[i].classList.remove('fa-chevron-down')
+                } else {
+                    more[i].classList.remove('fa-chevron-down')
+                    more[i].classList.remove('fa-plus')
+                    more[i].classList.remove('fa-minus')
+                    more[i].classList.add('fa-chevron-up')
+                    info[i].style.display = 'none'
+                }
+            }
+            else {
+                more[i].value = '0'
+                style[i].style.display = 'none'
+                if (windowWidth > 1024) {
+                    more[i].classList.remove('fa-minus')
+                    more[i].classList.add('fa-plus')
+                    more[i].classList.remove('fa-chevron-up')
+                    more[i].classList.remove('fa-chevron-down')
+                } else {
+                    more[i].classList.remove('fa-chevron-up')
+                    more[i].classList.add('fa-chevron-down')
+                    more[i].classList.remove('fa-plus')
+                    more[i].classList.remove('fa-minus')
+                    info[i].style.display = 'block'
+                }
+            }
+        })
+    }
+}
 
-minusTwo.addEventListener('click', function (event) {
-    event.currentTarget.style.display = 'none'
-    styleTwo.style.display = 'none'
-    plusTwo.style.display = 'block'
-})
-plusTwo.addEventListener('click', function (event) {
-    event.currentTarget.style.display = 'none'
-    styleTwo.style.display = 'flex'
-    minusTwo.style.display = 'block'
-})
 
-minusThree.addEventListener('click', function (event) {
-    event.currentTarget.style.display = 'none'
-    styleThree.style.display = 'none'
-    plusThree.style.display = 'block'
-})
-plusThree.addEventListener('click', function (event) {
-    event.currentTarget.style.display = 'none'
-    styleThree.style.display = 'flex'
-    minusThree.style.display = 'block'
-})
+// Phan trang
+// limit: gioi han
+let limit = 0;
+let thisPage = 1;
+let list = document.querySelectorAll('.product-product .box-product');
+function checkLimit(widthPage) {
+    console.log(widthPage)
+    if (widthPage >= 400 && widthPage <= 1024) {
+        limit = 12;
+    }
+    else {
+        limit = 10;
+    }
+    loadItem()
+}
 
-//heart
-let likeButton = document.getElementsByClassName('btn-like')
-
-for (i = 0; i < likeButton.length; i++) {
-    likeButton[i].addEventListener('click', function (event) {
-        event.currentTarget.classList.toggle('pink');
+let widthPage = document.getElementById('website').clientWidth
+checkLimit(widthPage)
+$(document).ready(function () {
+    $(window).resize(function () {
+        widthPage = document.getElementById('website').clientWidth
+        checkLimit(widthPage)
     })
+})
+
+function loadItem() {
+    let beginGet = limit * (thisPage - 1);
+    let endGet = limit * thisPage - 1;
+    list.forEach((item, key) => {
+        if (key >= beginGet && key <= endGet)
+            item.style.display = 'block';
+        else
+            item.style.display = 'none';
+    })
+    listPage();
+}
+loadItem();
+
+function listPage() {
+    let count = Math.ceil(list.length / limit);
+    document.querySelector('.listPage').innerHTML = '';
+
+    // prev
+    if (thisPage >= 1) {
+        let prev = document.createElement('li');
+        prev.classList.add('fa-solid', 'fa-chevron-left');
+        if (thisPage > 1) {
+            prev.setAttribute('onclick', 'changePage(' + (thisPage - 1) + ')');
+        } else {
+            prev.classList.add('P-N')
+        }
+        document.querySelector('.listPage').appendChild(prev);
+    }
+
+    for (i = 1; i <= count; i++) {
+        let newPage = document.createElement('li');
+        newPage.innerText = i;
+        if (i == thisPage)
+            newPage.classList.add('active');
+        newPage.setAttribute('onclick', 'changePage(' + i + ')');
+        document.querySelector('.listPage').appendChild(newPage);
+    }
+
+    // next
+    if (thisPage <= count) {
+        let next = document.createElement('li');
+        next.classList.add('fa-solid', 'fa-chevron-right');
+        if (thisPage < count) {
+            next.setAttribute('onclick', 'changePage(' + (thisPage + 1) + ')');
+        } else {
+            next.classList.add('P-N')
+        }
+        document.querySelector('.listPage').appendChild(next);
+    }
+}
+
+function changePage(i) {
+    
+    thisPage = i;
+    loadItem();
 }
 
