@@ -582,9 +582,7 @@
 
 .brand-brand {
     display: flex;
-    -webkit-display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
 }
 
 .box-brand {
@@ -1290,7 +1288,7 @@
 }
 
 .website .P-N {
-    cursor: no-drop;
+    cursor: default;
     color: #c1c1c1;
 }
 
