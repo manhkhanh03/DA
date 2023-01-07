@@ -1,17 +1,18 @@
+// tang tong so luong san pham
 // all in input and thanh toan
 var allInput = document.getElementsByClassName('checkbox')
 var action = document.getElementById('action')
 var sumProduct = document.getElementById('sumProduct')
 var sumPrice = document.getElementById('sumPrice')
-action.onclick = function () {
-    if (this.checked) {
-        $('input[type=checkbox]').prop('checked', true)
-    } else {
-        $('input[type=checkbox]').prop('checked', false)
+function actionn() {
+    action.onclick = function () {
+        if (this.checked) {
+            $('input[type=checkbox]').prop('checked', true)
+        } else {
+            $('input[type=checkbox]').prop('checked', false)
+        }
     }
 }
-
-// tang tong so luong san pham
 
 // Tang so luong san pham
 let plus = document.getElementsByClassName('plus')
@@ -107,7 +108,6 @@ function check(node, money) {
     let a = 0
     let c = 0
     for (let i = 0; i < allInput.length; i++) {
-
         allInput[i].addEventListener('click', function () {
             if (allInput[i].checked)
                 allInput[i].value = '1'
@@ -206,6 +206,7 @@ grow(windowWidth)
 onclick(windowWidth)
 reADD(windowWidth)
 sort(windowWidth)
+slide(windowWidth)
 
 $(document).ready(function () {
     $(window).resize(function () {
@@ -215,6 +216,7 @@ $(document).ready(function () {
         onclick(windowWidth)
         reADD(windowWidth)
         sort(windowWidth)
+        slide(windowWidth)
     })
 })
 
@@ -238,12 +240,8 @@ $(document).ready(function () {
 
 
 //slickSlider
-let selling
-
-$(document).ready(function () {
-    selling = document.getElementById('best-selling').clientWidth
-    console.error(selling)
-    if (selling >= 1024) {
+function slide(windowWidth) {
+    if (windowWidth >= 1024) {
         $('.autoplay').slick({
             slidesToShow: 5,
             slidesToScroll: 1,
@@ -251,7 +249,7 @@ $(document).ready(function () {
             autoplaySpeed: 2000,
         });
     }
-    else if (selling >= 740) {
+    else if (windowWidth >= 740) {
         $('.autoplay').slick({
             slidesToShow: 4,
             slidesToScroll: 1,
@@ -259,17 +257,16 @@ $(document).ready(function () {
             autoplaySpeed: 2000
         });
     }
-    else if (selling >= 320) {
-        console.log(selling)
-        $('.autoplay').slick({
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 2000
-        });
-    }
+    // else if (windowWidth >= 320) {
+    //     $('.autoplay').slick({
+    //         slidesToShow: 3,
+    //         slidesToScroll: 1,
+    //         autoplay: true,
+    //         autoplaySpeed: 2000
+    //     });
+    // }
     else {
-        console.warn(selling)
+        console.warn(windowWidth)
         $('.autoplay').slick({
             slidesToShow: 2,
             slidesToScroll: 1,
@@ -277,7 +274,7 @@ $(document).ready(function () {
             autoplaySpeed: 2000
         });
     }
-});
+}
 
 
 // singleItem
@@ -494,7 +491,7 @@ function listPage() {
 }
 
 function changePage(i) {
-    
+
     thisPage = i;
     loadItem();
 }
