@@ -1228,6 +1228,7 @@
     display: flex;
     position: relative;
     justify-content: space-evenly;
+    -webkit-justify-content: space-evenly;
 }
 
 .title {
