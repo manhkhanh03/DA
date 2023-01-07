@@ -1531,7 +1531,7 @@
         position: absolute;
         top: -78px;
         left: 0;
-        height: 270px;
+        height: 2700px;
         box-shadow: none;
         z-index: 1000;
         transform-origin: 50% top;
@@ -1555,10 +1555,6 @@
 
     .brand-faq {
         top: -242px;
-    }
-
-    .navbar .nav-item:hover .list-brand {
-        display: block;
     }
 
     .navbar .item-nav:hover .list-brand {
