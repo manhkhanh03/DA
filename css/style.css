@@ -1215,7 +1215,7 @@
     height: 100%;
     width: 100%;
     position: absolute;
-    z-index: -1;
+    z-index: 0;
 }
 
 .footer-img img {
@@ -1226,6 +1226,7 @@
 .footer-information {
     z-index: 9999;
     display: flex;
+    position: relative;
     justify-content: space-evenly;
 }
 
