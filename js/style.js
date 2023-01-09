@@ -1,3 +1,9 @@
+let like = document.getElementsByClassName('btn-like')
+for (i = 0; i < like.length; i++) {
+    like[i].addEventListener('click', function (event) {
+        event.currentTarget.classList.toggle('pink');
+    })
+}
 
 $(document).ready(function () {
     $('.barsButton').click(function () {

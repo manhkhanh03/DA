@@ -35,10 +35,6 @@ button {
     font-size: 20px;
 }
 
-.pink {
-    color: #ff1a40;
-}
-
 @keyframes growth {
     from {
         opacity: 0;
