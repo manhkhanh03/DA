@@ -514,7 +514,7 @@
     font-weight: 600;
 }
 
-.box-transporot p {
+.box-transport p {
     font-size: 12px;
     font-weight: lighter;
 }
@@ -1622,12 +1622,12 @@
 
     .left-filter {
         display: none;
-        position: fixed;
-        top: 90px;
+        position: absolute;
+        top: -100px;
         left: 0;
         /* bottom: 0; */
-        height: 2000px;
-        z-index: 999;
+        height: 880px;
+        z-index: 9999999;
         margin: -1px;
         padding: 0 50px;
         width: 100%;

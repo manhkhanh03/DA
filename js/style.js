@@ -1,3 +1,20 @@
+
+$(document).ready(function () {
+    $('.barsButton').click(function () {
+        $('.left-filter').slideToggle()
+        $('.right-filter').css('display', 'none');
+        $('.body').css('max-width', '100%')
+    })
+})
+
+$(document).ready(function () {
+    $('.close-filter').click(function () {
+        $('.left-filter').hide()
+        $('.right-filter').css('display', 'block');
+        $('.body').css('max-width', '96%')
+    })
+})
+
 // tang tong so luong san pham
 // all in input and thanh toan
 var allInput = document.getElementsByClassName('checkbox')
